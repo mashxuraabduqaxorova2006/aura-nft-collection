@@ -1,38 +1,63 @@
-# AuraNFT | Decentralized Digital Collection
+# BlockViz ⛓ | JavaScript Blockchain Simulyatsiyasi
 
-AuraNFT is a premium Web3 platform for minting and voting on unique digital entities.
+BlockViz — real SHA-256 hashing, Proof-of-Work mining va zanjir validatsiyasini o'z ichiga olgan to'liq JavaScript blockchain simulyatsiyasi.
 
-## 🚀 Key Features
+## ✨ Imkoniyatlar
 
-- **ERC721 Minting**: Create unique NFTs with custom metadata.
-- **On-chain Voting**: Engage with the collection through a decentralized voting system.
-- **Glassmorphism UI**: High-end modern design with smooth animations.
-- **OpenZeppelin Integrated**: Secure and standard-compliant smart contracts.
+| # | Talab | Holati |
+|---|-------|--------|
+| 1 | Block klassi (index, timestamp, data, hash) | ✅ |
+| 2 | SHA-256 hash hisoblash (Web Crypto API) | ✅ |
+| 3 | Genesis blok | ✅ |
+| 4 | Yangi blok qo'shish | ✅ |
+| 5 | Har blok oldingi bilan bog'liq (previousHash) | ✅ |
+| 6 | Blockchain massivi | ✅ |
+| 7 | Zanjir validatsiyasi | ✅ |
+| 8 | Ma'lumot o'zgarganda zanjir buzilishini aniqlash | ✅ |
+| 9 | Proof-of-Work (mining, nonce) | ✅ |
+| 10 | Konsolda bloklar ro'yxatini chiqarish | ✅ |
 
-## 🛠 Tech Stack
+## 🛠 Texnologiyalar
 
-- **Solidity**: Smart contract logic.
-- **Ethers.js**: Blockchain interaction.
-- **HTML/CSS/JS**: Frontend presentation.
-- **GitHub CLI**: Automated deployment.
+- **JavaScript (Vanilla)** — asosiy mantiq
+- **Web Crypto API** — SHA-256 hashing
+- **HTML5 / CSS3** — Premium glassmorphism UI
+- **JetBrains Mono & Space Grotesk** — shriftlar
 
-## 📂 Project Structure
+## 📂 Fayl tuzilmasi
 
-- `contracts/`: AuraNFT.sol (Smart Contract).
-- `frontend/`: UI files (index.html, style.css, app.js).
-- `assets/`: AI-generated premium NFT images.
-- `PRESENTATION.md`: Slide deck for the project demo.
+```
+blockviz/
+├── index.html      → Asosiy UI sahifasi
+├── blockchain.js   → Block va Blockchain klasslari (yadro)
+├── bc-app.js       → Frontend vizualizatsiya logikasi
+├── bc-style.css    → Premium Dark Neon UI
+└── README.md       → Hujjat
+```
 
-## 📖 Deployment Guide
+## 🚀 Ishlatish
 
-1. **Deploy Contract**:
-   - Use Remix or Hardhat to deploy `AuraNFT.sol`.
-   - Copy the contract address.
-2. **Setup Frontend**:
-   - Open `frontend/app.js`.
-   - Replace `0x0000...` with your deployed address.
-3. **Run**:
-   - Open `index.html` in your browser.
+1. `index.html` ni brauzerda oching
+2. **"Blockchain'ni Ishga Tushirish"** tugmasini bosing — Genesis blok yaratiladi
+3. Matn kiriting va **"Mine & Qo'sh"** — yangi blok mined bo'ladi
+4. **"Zanjirni Tekshirish"** — validatsiyani ko'ring
+5. **"Ma'lumotni Buzish (Test)"** — buzilgan zanjirni sinab ko'ring
+
+## 🔬 Qanday ishlaydi
+
+```js
+class Block {
+    constructor(index, timestamp, data, previousHash = '') { ... }
+    async calculateHash() { /* SHA-256 */ }
+    async mineBlock(difficulty) { /* Proof-of-Work: nonce++ */ }
+}
+
+class Blockchain {
+    async createGenesisBlock() { ... }
+    async addBlock(data) { ... }
+    async isChainValid() { ... }
+}
+```
 
 ---
-*Created for 4-topshiriq (Assignment 4)*
+*4-topshiriq — Blockchain Simulyatsiyasi*
