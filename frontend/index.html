@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraNFT | Premium Digital Collection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-gradient"></div>
+
+    <nav class="navbar">
+        <div class="brand">AURA <small>NFT</small></div>
+        <button id="connectWallet" class="btn-connect">Connect Wallet</button>
+    </nav>
+
+    <main>
+        <header class="hero animate-up">
+            <h1>Discover <span class="gradient-text">Rare</span> Digital Entities</h1>
+            <p>Mint, collect, and vote for the most extraordinary cosmic cyber-entities on the blockchain.</p>
+        </header>
+
+        <!-- Mint Section -->
+        <section class="mint-container glass-card animate-up" style="animation-delay: 0.2s;">
+            <h2 style="margin-bottom: 30px; text-align: center;">Mint New NFT</h2>
+            <div class="input-group">
+                <label>NFT Name</label>
+                <input type="text" id="nftName" placeholder="Enter entity name...">
+            </div>
+            <div class="input-group">
+                <label>Description</label>
+                <input type="text" id="nftDesc" placeholder="Describe the entity...">
+            </div>
+            <div class="input-group">
+                <label>Image URL (IPFS or Local)</label>
+                <input type="text" id="nftUrl" placeholder="https://ipfs.io/ipfs/...">
+            </div>
+            <button id="mintBtn" class="btn-mint">Mint to Blockchain</button>
+        </section>
+
+        <!-- Gallery Section -->
+        <h2 style="text-align: center; margin-top: 80px;" class="animate-up">Collection Gallery</h2>
+        <section class="gallery">
+            <!-- Items will be injected by JS -->
+            <!-- Sample Item 1 -->
+            <div class="nft-card glass-card animate-up" style="animation-delay: 0.3s;">
+                <img src="../assets/nft1.png" class="nft-image" alt="NFT 1">
+                <div class="nft-info">
+                    <div>
+                        <h3>Cosmic Entity #01</h3>
+                        <p style="color: var(--text-dim); font-size: 0.85rem;">Cybernetic Nebula</p>
+                    </div>
+                    <div class="vote-badge">12 Votes</div>
+                </div>
+                <button class="btn-vote" style="margin-top: 15px; width: 100%;">Vote for Alpha</button>
+            </div>
+
+            <!-- Sample Item 2 -->
+            <div class="nft-card glass-card animate-up" style="animation-delay: 0.4s;">
+                <img src="../assets/nft2.png" class="nft-image" alt="NFT 2">
+                <div class="nft-info">
+                    <div>
+                        <h3>Golden Guardian</h3>
+                        <p style="color: var(--text-dim); font-size: 0.85rem;">Crimson Armor</p>
+                    </div>
+                    <div class="vote-badge">8 Votes</div>
+                </div>
+                <button class="btn-vote" style="margin-top: 15px; width: 100%;">Vote for Alpha</button>
+            </div>
+
+            <!-- Sample Item 3 -->
+            <div class="nft-card glass-card animate-up" style="animation-delay: 0.5s;">
+                <img src="../assets/nft3.png" class="nft-image" alt="NFT 3">
+                <div class="nft-info">
+                    <div>
+                        <h3>Data Dragon</h3>
+                        <p style="color: var(--text-dim); font-size: 0.85rem;">Binary Streams</p>
+                    </div>
+                    <div class="vote-badge">15 Votes</div>
+                </div>
+                <button class="btn-vote" style="margin-top: 15px; width: 100%;">Vote for Alpha</button>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 60px; text-align: center; color: var(--text-dim);">
+        &copy; 2026 AuraNFT Marketplace. All rights reserved.
+    </footer>
+
+    <!-- Web3 Ethers.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
